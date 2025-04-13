@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark mode only */
+    --background: 0 0% 3%;         /* Almost black for better eye comfort */
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 24 95% 60%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 24 15% 18%;
+    --muted-foreground: 24 15% 75%;
+
+    --accent: 24 95% 60%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 24 20% 25%;
+    --input: 24 20% 15%;
+    --ring: 24 95% 60%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 24 95% 60%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 24 60% 30%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 24 50% 25%;
+    --sidebar-ring: 24 95% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glass morphism for dark mode */
+.glass-dark {
+  @apply backdrop-blur-xl bg-black/30 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
+}
+
+/* Gradient text for dark mode */
+.text-gradient {
+  @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+}
+
+/* Custom combat palette */
+.bg-combat-brown {
+  @apply bg-[#5e2e1d];
+}
+.bg-combat-red {
+  @apply bg-[#b53f1f];
+}
+.bg-combat-orange {
+  @apply bg-[#f97316];
+}
+.text-combat-orange {
+  @apply text-[#f97316];
+}
+.border-combat-orange {
+  @apply border-[#f97316];
+}
+.bg-combat-gradient {
+  background: linear-gradient(to right, #000000, #1a1a1a, #f97316);
+}
+.orange-glow {
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+}
+
+.bold{
+  font-weight: bold;
+}
