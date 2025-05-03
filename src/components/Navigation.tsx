@@ -41,11 +41,11 @@ const Navigation = () => {
       path: "/video-summarization", 
       icon: <FileText className="h-5 w-5 mr-2" /> 
     },
-    { 
+    /*{ 
       name: "Team Statistics", 
       path: "/team-statistics", 
       icon: <BarChart3 className="h-5 w-5 mr-2" /> 
-    },
+    },*/
   ];
 
   return (

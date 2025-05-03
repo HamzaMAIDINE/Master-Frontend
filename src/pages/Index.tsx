@@ -33,12 +33,12 @@ const Index = () => {
       description: "Get AI-powered summaries of fight videos and key moments",
       path: "/video-summarization"
     },
-    {
+    /*{
       icon: <BarChart3 className="h-12 w-12 text-secondary" />,
       title: "Team Statistics",
       description: "Track performance metrics for your entire combat team",
       path: "/team-statistics"
-    }
+    }*/
   ];
 
   return (
